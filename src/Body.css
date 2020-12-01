@@ -6,3 +6,28 @@
     padding: 30px;
     background: linear-gradient( rgb(91,87, 115), rgba(0, 0 ,0, 1))
 }
+
+.body_info {
+    display:flex;
+    align-items: flex-end;
+    padding: 10px; 
+}
+
+.body_infoText {
+    flex: 1;
+}
+
+.body_infoText {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.body_infoText > p {
+    font-size: 14px;
+}
+
+.body_info > img {
+    height: 20vw;
+    margin: 0 20px; 
+    box-shadow: 0 4px 60px rgba(0, 0 , 0, 0.5 );
+}
