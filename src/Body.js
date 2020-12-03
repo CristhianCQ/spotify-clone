@@ -1,4 +1,3 @@
-import { Favorite, MoreHoriz, PlayCircleFilled } from '@material-ui/icons'
 import React from 'react'
 import './Body.css'
 import { useDataLayerValue } from './DataLayer'
