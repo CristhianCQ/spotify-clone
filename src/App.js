@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import SpotifyWebApi from 'spotify-web-api-js';
 import './App.css';
 import { useDataLayerValue } from './DataLayer';
@@ -41,6 +41,13 @@ function App() {
           dispatch({
             type: 'SET_PLAYLISTS',
             playlists: playlists
+          })
+        });
+
+        spotify.getPlaylist('37i9dQZF1EM09ISORPhBXs').then((response) => {
+          dispatch({
+            type: 'SET_DISCOVER_WEEKLY',
+            discovery_weekly: response,
           })
         })
         
