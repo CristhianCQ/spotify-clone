@@ -9,10 +9,9 @@ export const Player = ({spotify}) => {
         <div className= "player">
              <div className="player__body">
                  <Sidebar />
-                 <Body spotify={spotify}/>
-                      
+                 <Body spotify={spotify}/>       
              </div>
-             <Footer /> 
+             <Footer spotify={spotify}/> 
         </div>
     )
 }

@@ -4,7 +4,9 @@ export const initialState = {
     playing: false,
     item: null,
     token: null,
-    discovery_weekly:null,
+    discover_weekly:null,
+    spotify: null,
+   
 }
 
 const reducer = (state, action) => {
@@ -30,8 +32,24 @@ const reducer = (state, action) => {
         case 'SET_DISCOVER_WEEKLY':
             return {
                 ...state,
-                discovery_weekly: action.discovery_weekly 
+                discover_weekly: action.discovery_weekly 
             }
+        case "SET_PLAYING":
+            return {
+                ...state,
+                playing: action.playing,
+            };
+        case "SET_ITEM":
+            return {
+                ...state,
+                item: action.item,
+            };
+            
+        case "SET_SPOTIFY":
+            return {
+            ...state,
+            spotify: action.spotify,
+            };
         default:
             return state;
 

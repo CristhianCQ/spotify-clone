@@ -1,7 +1,7 @@
 .body {
     /* border: 1px solid red;  */
     padding: 30px;
-    flex : 0.8;
+    flex : 0.9;
     height: 100vh;
     color: white;
     overflow-y: overlay;
@@ -18,14 +18,13 @@
     padding: 10px; 
 }
 
-.body_info > img {
+.body__info > img {
     height: 20vw;
     margin: 0 20px; 
     box-shadow: 0 4px 60px rgba(0, 0 , 0, 0.5 );
 }
 
 .body__infoText {
-
     flex: 1;
 }
 

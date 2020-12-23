@@ -22,12 +22,13 @@ function App() {
 
     if (_token) {
       // setToken(_token); 
+      spotify.setAccessToken(_token);
 
       dispatch({
         type: 'SET_TOKEN',
         token: _token,
       })
-      spotify.setAccessToken(_token);
+      
 
       spotify.getMe()
         .then( (user) => {
@@ -44,18 +45,23 @@ function App() {
           })
         });
 
-        spotify.getPlaylist('37i9dQZF1EM09ISORPhBXs').then((response) => {
+        spotify.getPlaylist('37i9dQZEVXcS6kJZJdm9ht').then((response) => {
           dispatch({
             type: 'SET_DISCOVER_WEEKLY',
             discovery_weekly: response,
           })
         })
+
+        dispatch({
+          type: "SET_SPOTIFY",
+          spotify,
+        });
         
     }
 
     console.log('I have the token 👉',token );   
 
-  }, [])
+  }, [token, dispatch]);
 
   return (
     <div className="App">

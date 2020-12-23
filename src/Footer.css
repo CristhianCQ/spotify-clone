@@ -46,11 +46,11 @@
     color:#1ed15e;
 }
 
-.footer__songInfo {
+.footer__songInfo>h4 {
     margin-top: 5px;
 } 
 
-.footer__songInfo {
+.footer__songInfo>p {
     font-size: 12px;
 }
 
